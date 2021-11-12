@@ -73,7 +73,7 @@ else{
                             <div id="profile__img">
                                 <img src="https://item.kakaocdn.net/do/8bdb8dec2d96f5e334479d9e139a892cf43ad912ad8dd55b04db6a64cddaf76d" alt="프로필">
                             </div>
-                            <h3 id="user__name"><?=$row['u_name']?></h3>
+                            <h3 id="user__name"><?=$_SESSION['name']?></h3>
                         </div>
                     <ul id="acc__menu">
                         <li><a href="./mypage.php">계정</a></li>
