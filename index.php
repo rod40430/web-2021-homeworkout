@@ -12,7 +12,7 @@ else{
     echo '
     <script>
     alert("로그인을 해주세요.");
-    location.href = "http://192.168.20.142/web/%EB%A1%9C%EA%B7%B8%EC%9D%B8/index.php";
+    location.href = "http://192.168.20.142/web/login.php";
     </script>
     ';
 }
@@ -40,7 +40,7 @@ else{
             <div class="left__bar">
             
                 <!-- 로고 -->
-                <a href="index.php"><img class="logo" src="image/logo_f.png"></a>
+                <a href="./index.php"><img class="logo" src="image/logo_f.png"></a>
 
                 <!-- 네비 바 -->
                 <ul class="nav">
@@ -76,7 +76,7 @@ else{
                             <h3 id="user__name">u_name</h3>
                         </div>
                     <ul id="acc__menu">
-                        <li><a href="../mypage/myPage.php">계정</a></li>
+                        <li><a href="./mypage.php">계정</a></li>
                         <li><a href="#">고객센터</a></li>
                         <li><a href="#" onclick="logout();">로그아웃</a></li>
                     </ul>
@@ -540,7 +540,7 @@ else{
 
         <!-- 푸터ㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓ -->
         <footer>
-            <a href="index.php"><img class="logo" src="image/logo_f.png"></a>
+            <a href="./index.php"><img class="logo" src="image/logo_f.png"></a>
             <ul>
                 <li onclick="soon()">회사소개</li>
                 <li onclick="soon()">고객센터</li>

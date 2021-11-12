@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
-    <link rel="stylesheet" href="./css/첫화면.css" type="text/css">
+    <link rel="stylesheet" href="./css/first.css" type="text/css">
 </head>
 <body>
     <div id="background">
@@ -17,20 +17,20 @@
                     <h4>시청할 준비가 되셨나요? 맴버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</h4>
                 </div>
                 <div id="headItrt">
-                    <form method="POST" action="http://192.168.20.142/web/%EB%A1%9C%EA%B7%B8%EC%9D%B8/index.php">
+                    <form method="POST" action="http://192.168.20.142/web/login.php">
                         <input type="text" placeholder="이메일 주소"><input type="submit" value="시작하기">
                     </form>
                 </div>
             </div>            
             <div id="headLine">
-                <div class="logo"><a href="../첫화면/index.php"><img src="image/homeworkout.png"></div></a>
+                <div class="logo"><a href="./first.php"><img src="image/homeworkout.png"></div></a>
                 <div class="other">
                     <select class="select">
                         <option>한국어</option>
                         <option>English</option>
                         <img src="image/Down.PNG">
                     </select>
-                    <a href="../로그인/index.php"><button class="button button1">로그인</button></a>
+                    <a href="./login.php"><button class="button button1">로그인</button></a>
                 </div>
             </div>
         </div>

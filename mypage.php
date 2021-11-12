@@ -6,7 +6,7 @@
         echo '
         <script>
         alert("로그인을 해주세요.");
-        location.href = "http://192.168.20.142/web/%EB%A1%9C%EA%B7%B8%EC%9D%B8/index.php";
+        location.href = "http://192.168.20.142/web/login.php";
         </script>
         ';
     }
@@ -28,8 +28,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page</title>
-    <link rel="stylesheet" href="./MyPage.css">
-    <script src="./myPage.js"></script>
+    <link rel="stylesheet" href="./css/mypage.css">
+    <script src="./js/mypage.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
@@ -37,7 +37,7 @@
 
     <div id="modal">
         <div id="pay__modal">
-            <form action="./pay.php" method="POST">
+            <form action="./php/pay.php" method="POST">
                 <select name="p_type">
                     <option value="신한">신한</option>
                     <option value="농협">농협</option>
@@ -60,7 +60,7 @@
 
     <header>
         <div class="left__bar">
-            <a href="../main/index.php"><img class="logo" src="./image/logo_f.png"></a>
+            <a href="./index.php"><img class="logo" src="./image/logo_f.png"></a>
         </div>
 
         <div class="right__bar">
@@ -112,9 +112,9 @@
                         <div><?=$row['u_phone']?></div>
                     </div>
                     <div class="flexs columns txt__align__back">
-                        <a href="./modify.php">이메일 주소 변경</a>
-                        <a href="./modify.php">비밀번호 변경</a>
-                        <a href="./modify.php">휴대폰번호 변경</a>
+                        <a href="./php/modify.php">이메일 주소 변경</a>
+                        <a href="./php/modify.php">비밀번호 변경</a>
+                        <a href="./php/modify.php">휴대폰번호 변경</a>
                     </div>
                 </section>  
             </div>

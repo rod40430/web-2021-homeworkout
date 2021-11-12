@@ -20,7 +20,7 @@
             <section class="login1">
                 <!-- <img class="logo" src="img/logo_w.png"> -->
                 <div id="lcon">
-                    <a href="../첫화면/index.php"><img class="logomain" src="img/logo_w.png"></a>
+                    <a href="./first.php"><img class="logomain" src="./image/logo_w.png"></a>
                     <div class="logintext">최신 홈트 영상들과 인기있는 홈트 영상들을<br>언제 어디에서나 다양한 디바이스에서<br>무제한으로 즐길실 수 있습니다.</div>
                     <form method="post" action="./php/login.php">
                         <input class="id" type="email" placeholder="아이디" name="id"><br>
@@ -37,10 +37,10 @@
                 </div> 
                 <div class="etc_text">다른 계정 서비스로 로그인</div><br>
                 <div class="etc">
-                <div><img class="img" src="img/KKo.JPG"></div>
-                <div><img class="img" src="img/naver.JPG"></div>
-                <div><img class="img" src="img/google.JPG"></div>
-                <div><img class="img" src="img/apple.JPG"></div>
+                <div><img class="img" src="./image/KKo.JPG"></div>
+                <div><img class="img" src="./image/naver.JPG"></div>
+                <div><img class="img" src="./image/google.JPG"></div>
+                <div><img class="img" src="./image/apple.JPG"></div>
                 </div>
             </div>
             </section>
@@ -57,7 +57,7 @@
     </div>
     <div id="find">
         <section class="find1">
-            <img class="find_logo" src="img/logo_w.png">
+            <img class="find_logo" src="./image/logo_w.png">
             <div id="fcon">
                 <button id="f_button1" class="uj_button1" >아이디 찾기</button>
                 <button id="f_button2" class="uj_button2" >비밀번호 재설정</button>
@@ -75,7 +75,7 @@
     </div>
     <div id="j_m">
         <section class="join_member">
-            <img class="jm_logo" src="img/logo_w.png">
+            <img class="jm_logo" src="./image/logo_w.png">
             <div id="jcon">
                 <div class="join_text">회원가입</div>
                 <form method="post" action="./php/signup.php">
@@ -92,7 +92,7 @@
     </div>
     <div id="u_j">
         <section class="user_join1">
-            <img class="uj_logo" src="img/logo_w.png">
+            <img class="uj_logo" src="./image/logo_w.png">
             <div id="ucon">
                 <div class="ck_user">본인인증</div>
                 <div class="join_ck">인증방식 선택</div>

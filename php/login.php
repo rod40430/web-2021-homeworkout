@@ -21,7 +21,7 @@ if (password_verify($pass, $row['u_pass'])){
     $_SESSION['phone'] = $row['u_phone'];
     $_SESSION['rank'] = $row['u_rank'];
     $_SESSION['date'] = $row['date'];
-    header("location: http://192.168.20.142/web/main/index.php");
+    header("location: http://192.168.20.142/web/index.php");
 }
 else{
     echo "<script>alert('로그인실패.');

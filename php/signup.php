@@ -38,7 +38,7 @@ $result = mysqli_query($conn, $sql);
         echo "
         <script>
             alert('회원가입이 완료되었습니다.');
-            location.href = 'http://192.168.20.142/web/로그인/index.php';
+            location.href = 'http://192.168.20.142/web/index.php';
         </script>
         ";
     }
