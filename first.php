@@ -17,20 +17,20 @@
                     <h4>시청할 준비가 되셨나요? 맴버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</h4>
                 </div>
                 <div id="headItrt">
-                    <form method="POST" action="http://192.168.20.142/web/login.php">
+                    <form method="POST" action="/web/login.php">
                         <input type="text" placeholder="이메일 주소 입력"><input type="submit" value="시작하기">
                     </form>
                 </div>
             </div>            
             <div id="headLine">
-                <div class="logo"><a href="http://192.168.20.142/web/first.php"><img src="./image/logo_w.png"></a></div>
+                <div class="logo"><a href="/web/first.php"><img src="./image/logo_w.png"></a></div>
                 <div class="other">
                     <select class="select">
                         <option>한국어</option>
                         <option>English</option>
                         <img src="./image/Down.PNG">
                     </select>
-                    <a href="http://192.168.20.142/web/login.php"><button class="button button1">로그인</button></a>
+                    <a href="/web/login.php"><button class="button button1">로그인</button></a>
                 </div>
             </div>
         </div>

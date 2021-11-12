@@ -22,7 +22,7 @@
                 <div id="lcon">
                     <a href="./first.php"><img class="logomain" src="./image/logo_w.png"></a>
                     <div class="logintext">최신 홈트 영상들과 인기있는 홈트 영상들을<br>언제 어디에서나 다양한 디바이스에서<br>무제한으로 즐길실 수 있습니다.</div>
-                    <form method="post" action="./php/login.php">
+                    <form method="post" action="./module/user.php?type=login">
                         <input class="id" type="email" placeholder="아이디" name="id"><br>
                         <input class="pass" type="password" placeholder="비밀번호" name="password"><br>
                         <div class="I_cb"><input type="checkbox" class="cb"> <div class="l_infor">아이디 저장</div></div> <br>

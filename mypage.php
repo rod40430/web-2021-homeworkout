@@ -6,7 +6,7 @@
         echo '
         <script>
         alert("로그인을 해주세요.");
-        location.href = "http://192.168.20.142/web/login.php";
+        location.href = "/web/login.php";
         </script>
         ';
     }
