@@ -27,26 +27,6 @@
                 <div class="other">
                     <select class="select">
                         <option>한국어</option>
-                        <option>English</option>
-                        <img src="image/Down.PNG">
-                    </select>
-                    <a href="../로그인/index.php"><button class="button button1">로그인</button></a>
-                </div>
-            </div>
-        </div>
-        <div id="body">
-            <div class="bodyContent1">
-                <section class="bodytext">
-            <h3><div class="conttext1">TV로 즐기세요.</div><div class="conttext2"> 스마트 TV, PlayStation, Xbox, Chromecast,<br>Apple TV, 블루레이 플레이어 등 다양한<br>디바이스에서 시청하세요.</div></h3>
-                </section>
-            <div class="Contentimg1"><img src="./image/apple.JPG"></div>
-            </div>
-            <div class="bodyContent2">
-                <div class="Contentimg1"><img src="./image/google.JPG"></div>
-                <section class="bodytext">
-            <h1><div class="conttext1">즐겨 보는 콘텐츠를<br>저장해 오프라인으로<br>시청하세요.</div><div class="conttext2">간편하게 저장하고 빈틈없이 즐겨보세요.</div></h1>
-                </section>
-            </div>
             <div class="bodyContent3">
                 <section class="bodytext">
             <h3><div class="conttext1">다양한 디바이스에서<br>시청하세요.</div><div class="conttext2">각종 홈트레이닝 영상을 스마트폰, 태블릿,<br>노트북, TV에서 무제한으로 스트리밍하세요.<br>추가요금이 전혀 없습니다.</div></h3>
