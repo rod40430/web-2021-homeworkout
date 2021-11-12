@@ -1,0 +1,333 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+}
+#login{
+    /* display: none; */
+    /* position: fixed; */
+    /* background-image: url(../img/main.png); */
+    background-color: #2b2b2b;
+}
+.login1{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(66, 66, 66, 0.432);
+}
+.login1 .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: auto;
+}
+.logomain{
+    width: 450px;
+}
+.logintext{
+    color: #cbcbcb;
+    padding: 0 25px 25px 0;
+    font-size: 18px;
+    padding-top: 10px;
+}
+.I_cb{
+    display: flex;
+    padding-left: 32px;
+}
+.cb {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 2px;
+    /* margin-bottom: 6px; */
+    background-color: #787878;
+    width: 17px;
+    height: 17px;
+}
+.l_infor{
+    color: white;
+    margin-top: 9px;
+    margin-left: 8px;
+    /* margin-bottom: 6px; */
+    color: #cbcbcb;
+}
+.id, .pass , .find_name,.find_phone_mail{
+    width: 380px;
+    height: 40px;
+    margin-top: 2px;
+    background-color: #787878; 
+    border-style: none;  
+}
+input::placeholder {
+    color: #cbcbcb;
+    padding-left: 5px;
+}
+#login_button{
+    width: 385px;
+    height: 40px;
+    border-radius: 17px;
+    background-color: #fe7373;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+}
+.other{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.h_join{
+    display: flex;
+    color: white;
+}
+.etc_text{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: #cbcbcb;
+}
+.etc{
+    display: flex;
+    justify-content: center;
+}
+.img{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin: 15px;
+    
+}
+footer{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.705);
+    color: white;
+    align-items: center;
+    width: 100vw;
+}
+ul{
+    display: flex;
+}
+li{
+    margin: 10px;
+}
+#find{
+    display: none;
+    background-color: #2b2b2b;
+}
+.find1{
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#fcon{
+    background-color: #515050;
+    padding: 15px;
+    border-radius: 10px;
+}
+.find_logo{
+    width: 450px;
+    margin-bottom: 10px;
+}
+#find_button{
+    width: 385px;
+    height: 40px;
+    border-radius: 17px;
+    background-color: #fe7373;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+}
+#f_button1, #f_button2{
+    background-color: #464646;
+    border: 0px;
+    width: 190px;
+    height: 40px;
+    color: #a8a8a8;
+    border-bottom: 1px solid #343434;
+    cursor: pointer;
+}
+
+.f_cb{
+    display: flex;
+    padding-left: 32px;
+    color: #cbcbcb;
+}
+.cbs{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.phone , .e-mail{
+    display: flex;
+    /* margin-bottom: 6px; */
+    background-color: #787878;
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#u_j{
+    display: none;
+    background-color: #2b2b2b;
+    color: white;
+}
+.user_join1{
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.uj_logo{
+    width: 600px;
+    margin-bottom: 50px;
+}
+.ck_user{
+    font-size: 18px;
+}
+#ucon{
+    background-color: #515050;
+    padding: 20px 45px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.s_ucon{
+    background-color: #808080;
+    border-radius: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.join_ck{
+    display: flex;
+    margin: 8px 0px;
+}
+.button_boder1{
+    display: flex;
+    border: 1px solid gray;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#u_button1, #u_button2{
+    margin: 30px;
+    padding: 7px 15px;
+    background-color: gray;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+}
+.button_boder2{
+    background-color: gray;
+    width: 2px;
+    height: 85px;
+}
+.ck_text{
+    display: flex;
+    border-bottom: 1px solid white;
+    padding: 3px 0px;
+    margin: 20px 0px 10px 0px;
+}
+.all_text{
+    display: flex;
+    padding: 5px 10px;
+    border-bottom: 2px solid rgb(172, 172, 172);
+}
+.user1_text,.user2_text,.user3_text,.ev_text{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+#all_ck{
+    margin-right: 5px;
+    margin-top: 1.5px;
+}
+.user_ck{
+    margin-right: 5px;
+}
+.user_kc{
+    display: flex;
+    align-items: center;
+}
+.kc1,.kc2,.kc3,.kc4{
+    margin-right: 20px;
+    transition: all 0.3s;
+}
+#user_button{
+    width: 385px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #fe7373;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+    margin: 20px 0px;
+    text-align: center;
+}
+.a_kc{
+    color: white;
+}
+#j_m{
+    display: none;
+    background-color: #2b2b2b;
+    color: white;
+}
+.join_member{
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.jm_logo{
+    width: 600px;
+    margin-bottom: 50px;
+}
+#jcon{
+    background-color: #515050;
+    padding: 20px 45px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.join_text{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.u_infor{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.j_text{
+    display: flex;
+}
+.j_id,.j_pass,.j_pass_ck,.j_name,.j_phone{
+    height: 20px;
+}
+.user1_s_text,.user2_s_text,.user3_s_text{
+    margin-left: 10px;
+    display: none;
+}
+.ev_s_text{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
