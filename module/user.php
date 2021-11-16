@@ -1,4 +1,5 @@
 <?php
+    ini_set('display_errors', '0');
     $type = $_GET['type'];
 
     function login() {

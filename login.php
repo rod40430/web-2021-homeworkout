@@ -79,14 +79,12 @@
             <div id="jcon">
                 <div class="join_text">회원가입</div>
                 <form method="post" action="./php/signup.php">
-                    <form method="post" action="./php/중복체크.php">
                     <div class="u_infor"><div class="j_text">이메일</div><input class="j_id" type="email" name="j_id"></div><br>
                     <div class="u_infor"><div class="j_text">비밀번호</div><input class="j_pass" type="password" name="j_password"></div><br>
                     <div class="u_infor"><div class="j_text">비밀번호 확인</div><input class="j_pass_ck" type="password" name="j_pass_ck"></div><br>
                     <div class="u_infor"><div class="j_text">이름</div><input class="j_name" type="text" name="j_name"></div><br>
                     <div class="u_infor"><div class="j_text">휴대번호</div><input class="j_phone" type="text" name="j_phone" placeholder="번호만 입력해주세요."></div><br>
                     <input type="submit" value="회원가입" id="user_button"><br>
-                </form>
             </div>
         </section>
     </div>

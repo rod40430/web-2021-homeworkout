@@ -1,4 +1,5 @@
 <?php
+    ini_set('display_errors', '0');
     session_start();
     ini_set('display_errors', '0');
     $conn = mysqli_connect('localhost', 'root', '123456', 'ht');
