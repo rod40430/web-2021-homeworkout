@@ -33,7 +33,7 @@
                 <div class="h_join">|</div>
                 <a href="#" class="h_join" id="pass_reset"onclick="find_id2(), button('f_button2')">비밀번호 찾기</a>
                 <div class="h_join">|</div>
-                <a href="#" class="h_join" id="user_join"onclick="users_join()">회원가입</a>
+                <a href="#" class="h_join" id="user_join"onclick="join_member()">회원가입</a>
                 </div> 
                 <div class="etc_text">다른 계정 서비스로 로그인</div><br>
                 <div class="etc">
@@ -57,7 +57,7 @@
     </div>
     <div id="find">
         <section class="find1">
-            <img class="find_logo" src="./image/logo_w.png">
+            <a href="./login.php"><img class="find_logo" src="./image/logo_w.png"></a>
             <div id="fcon">
                 <button id="f_button1" class="uj_button1" >아이디 찾기</button>
                 <button id="f_button2" class="uj_button2" >비밀번호 재설정</button>
@@ -75,7 +75,7 @@
     </div>
     <div id="j_m">
         <section class="join_member">
-            <img class="jm_logo" src="./image/logo_w.png">
+            <a href="./login.php"><img class="jm_logo" src="./image/logo_w.png"></a>
             <div id="jcon">
                 <div class="join_text">회원가입</div>
                 <form method="post" action="./php/signup.php">
@@ -90,7 +90,7 @@
     </div>
     <div id="u_j">
         <section class="user_join1">
-            <img class="uj_logo" src="./image/logo_w.png">
+            <a href="./login.php"><img class="uj_logo" src="./image/logo_w.png"></a>
             <div id="ucon">
                 <div class="ck_user">본인인증</div>
                 <div class="join_ck">인증방식 선택</div>

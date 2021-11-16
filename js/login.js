@@ -20,7 +20,7 @@ function dis(){
   }
   function join_member(){
     $('#u_j').show();
-    $('#j_m').hide();
+    $('#login').hide();
   }
   
   function ag(agtext, kcn){
