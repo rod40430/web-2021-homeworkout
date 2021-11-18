@@ -8,8 +8,13 @@
 </head>
 <body>
 <form action="./php/upload.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file" name="userfile" id="upload"><br>
+    <p>영상 업로드 : <input type="file" name="userfile" id="upload"></p>
+    <p>영상 이름 : <input type="text" name="name"></p>
+    <p>작가 : <input type="text" name="author"></p>
+    <p>강사 : <input type="text" name="teacher"></p>
+    <p>소개 : <input type="text" name="introduce"></p>
+    <p>카테고리 : <input type="text" name="category"></p>
+    <p>영상 등급 : <input type="text" name="vr_rank"></p>
     <input type="submit" value="업로드">
 </form>
 
