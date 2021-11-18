@@ -38,9 +38,6 @@
     else{
         print "파일 업로드 공격 가능성이 있습니다!\n";
     }
-    $sql = "select * from bundle where video_name = '$name'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
 ?>
 
 
