@@ -112,9 +112,9 @@
                         <div><?=$row['u_phone']?></div>
                     </div>
                     <div class="flexs columns txt__align__back">
-                        <a href="./php/modify.php">이메일 주소 변경</a>
-                        <a href="./php/modify.php">비밀번호 변경</a>
-                        <a href="./php/modify.php">휴대폰번호 변경</a>
+                        <a href="./module//userupdate.php?type=idupdate">이메일 주소 변경</a>
+                        <a href="./module//userupdate.php">비밀번호 변경</a>
+                        <a href="./module//userupdate.php">휴대폰번호 변경</a>
                     </div>
                 </section>  
             </div>
