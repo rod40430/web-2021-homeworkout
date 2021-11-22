@@ -40,4 +40,9 @@
     }
 ?>
 
+<script>
+    alert('영상 업로드가 되었습니다.');
+    history.back();
+</script>
+
 

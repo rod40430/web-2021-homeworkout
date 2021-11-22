@@ -1,0 +1,91 @@
+*{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: '나눔 스퀘어';
+}
+#upload__all{
+    background-color: #2b2b2b;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* position: relative; */
+}
+#upload__body{
+    background-color: #515050;
+    width: 18.5vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    position: relative;
+}
+.logo__img{
+    width: 13vw;
+    position: fixed;
+    top: 10px;
+    left: 1%;
+}
+#exit{
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+    position: absolute;
+    right: 4%;
+    top: 3%;
+    /* border: 1px solid red; */
+    /* border-radius: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.xbar1, .xbar2{
+    position: absolute;
+    transform: rotate(45deg);
+    width: 0.2vw;
+    height: 1.5vw;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 0.2vw;
+}
+.xbar2{
+    transform: rotate(-45deg);
+}
+#upload__body p{
+    color: #fff;
+    line-height: 3vh;
+    display: flex;
+    margin: 1.5vh 1vw;
+}
+#upload__body input[type=file]{
+    display: none;
+}
+#upload__body label{
+    cursor: pointer;
+    margin-left: 1vw;
+}
+#upload__body label>img{
+    width: 4.5vw;
+
+}
+#upload__body input[type=text]{
+    background-color: #515050;
+    border: 0;
+    border-bottom: 1px solid white;
+    margin-left: 0.5vw;
+    color: #fff;
+}
+input:focus{
+    outline:none;
+}
+#upload__body input[type=submit]{
+    width: 5vw;
+    height: 3vh;
+    margin-top: 2vh;
+    margin-left: 5vw;
+}
+
