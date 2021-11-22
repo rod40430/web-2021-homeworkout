@@ -16,6 +16,38 @@
         </form>
         ';
     }
+
+    function passupdate() {
+        $conn = mysqli_connect('localhost', 'root', '123456', 'ht');
+        $userid = $_SESSION['id'];
+        $sql = "select * from user where u_email = '$userid'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_array($result);
+        echo'
+        <h1>비밀번호 변경</h1>
+        <form action="./updatedb.php?type=passupdate" method="POST">
+            <p><input type="password" name="pass" placeholder="기존 비밀번호"></p>
+            <p><input type="password" name="updatepass" placeholder="새 비밀번호"></p>
+            <p><input type="password" name="passck" placeholder="비밀번호 확인"></p>
+            <p><input type="submit" value="변경하기"></P>
+        </form>
+        ';
+    }
+
+    function phoneupdate() {
+        $conn = mysqli_connect('localhost', 'root', '123456', 'ht');
+        $userid = $_SESSION['id'];
+        $sql = "select * from user where u_email = '$userid'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_array($result);
+        echo'
+        <h1>핸드폰번호 변경</h1>
+        <form action="./updatedb.php?type=phoneupdate" method="POST">
+            <p><input type="text" name="phoneupdate" value="'.$row["u_phone"].'"></p>
+            <p><input type="submit" value="변경하기"></P>
+        </form>
+        ';
+    }
     
     $type();
 ?>

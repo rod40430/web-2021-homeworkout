@@ -20,7 +20,7 @@
         $mail->IsHTML(true);
         $mail->Username = $naverid;
         $mail->Password = $naverpass;
-        $mail->SetFrom("rod40430@naver.com", "HT");
+        $mail->SetFrom($naverid, "HT");
         $mail->AddAddress($address);
         $mail->Subject = "HT 이메일 인증";
         $mail->Body = $body;
@@ -32,6 +32,7 @@
         }
         return $result;
     }
-
-    sendMail("xogns40430@naver.com", "테스트입니다.");
+    $code = sprintf(rand(100000,999999));
+    setcookie("code", $code, time() + 180);
+    sendMail("xogns40430@naver.com", "인증코드 : $code");
 ?>

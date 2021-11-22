@@ -113,8 +113,8 @@
                     </div>
                     <div class="flexs columns txt__align__back">
                         <a href="./module//userupdate.php?type=idupdate">이메일 주소 변경</a>
-                        <a href="./module//userupdate.php">비밀번호 변경</a>
-                        <a href="./module//userupdate.php">휴대폰번호 변경</a>
+                        <a href="./module//userupdate.php?type=passupdate">비밀번호 변경</a>
+                        <a href="./module//userupdate.php?type=phoneupdate">휴대폰번호 변경</a>
                     </div>
                 </section>  
             </div>
