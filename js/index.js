@@ -39,9 +39,26 @@ function Move(sectionId) {
 	let offset = $("#" + sectionId).offset(); // 각 색션의 위치 저장
 
 	// 저장된 위치까지 화면 스크롤 이동
-	$('html, body').stop().animate({
-	  scrollTop: offset.top
-	}, 1000);
+	if(sectionId == "top"){
+		$('html, body').stop().animate({
+			scrollTop: offset.top
+		}, 1000);
+	}
+	else if(sectionId == "recommend"){
+		let destination = offset.top - 120;
+		$('html, body').stop().animate({
+			scrollTop: destination
+		}, 1000);
+	}
+	else if(sectionId == "rank"){
+		let destination = offset.top - 120;
+		$('html, body').stop().animate({
+			scrollTop: destination
+		}, 1000);
+	}
+	else{
+		alert('Empty destination : #' + sectionId);
+	}
 }
 
 
@@ -62,7 +79,7 @@ function ShowBar(){
 	}
 
 	// 검색창의 넓이가 1px인 경우 보이고 아니면 가리기
-	if($('.search__bar').css('width') == '10px'){
+	if($('.search__bar').css('opacity') == '0'){
 		$('.search__bar').css(showBar);
 		console.log("show");
 		console.log($('.search__bar').css('width'));
@@ -77,17 +94,21 @@ function ShowBar(){
 
 // 헤더 배경색상 변경 함수
 $(window).scroll(function(){
-	let todayTop = $('#today').offset();
+	let targetTop = $('#watching').offset();
 	let styleObj = {
-		'background-color' : '#161616'
+		'background-color' : '#2b2b2b'
 	};
 
-	if($(window).scrollTop() > todayTop.top - 120){
+	if($(window).scrollTop() > 1){
 		$('header').css(styleObj);
-		$('.top__video > video').get(0).pause();
 	}else{
 		$('header').css('background', 'rgba(0, 0, 0, 0.287)');
-		$('.top__video > video').get(0).play();
+	}
+
+	if($(window).scrollTop() > targetTop.top){
+		$('#top > video').get(0).pause();
+	}else{
+		$('#top > video').get(0).play();
 	}
 });
 
@@ -105,7 +126,7 @@ $(document).ready(function () {
 	});
 
 	// li 클릭시
-	$(".video__thumb__layout").on('click', function () {
+	$(".video__item").on('click', function () {
 		$(".modal__layout").show();
 		$("#infor__content").hide();
 		$("body").css("overflow", "hidden");
@@ -146,6 +167,17 @@ $(document).ready(function (){
 	$('#start').on('click', function (){
 		$('.top__video > .a').get(0).play();
 	})
+
+	$('.video__item').hover(function() {
+        console.log('mouseover');
+        $(this).children('.title__layout').css('opacity', '1');
+        $(this).children('.title__layout').children('h3').css('left', '0%');
+    }, function() {
+        console.log('mouseleave');
+        $(this).children('.title__layout').css('opacity', '0');
+        $(this).children('.title__layout').children('h3').css('left', '-5%');
+    })
+
 
 	// 이동
 	// let moveToAway = {
@@ -234,28 +266,45 @@ $(document).ready(function (){
 	});
 });
 
-// li들 이동 함수
+// video items move
 $(document).ready(function (){
+	$('.left__arrow').parent().hide();
+
+	$('.right__arrow').parent().on('click', function (){
+
+		let findParent = $(this).parent().attr('class');
+
+		// show
+		$('.left__arrow').parent().show();
+		$('.btn__locate').css('justify-content', 'space-between');
+
+		// move
+		$(this).parent().prev().stop().animate({
+			left: '-=75%'
+		}, 400);
+
+		// create item
+		for(i = 0; i < 6; i++){
+			if(findParent == "btn__locate h208__btn"){
+				$(this).parent().prev().append('<li><div class="h208__video video__item"></div></li>');
+			}
+			if(findParent == "btn__locate h260__btn"){
+				$(this).parent().prev().append('<li><div class="h260__video video__item"></div></li>');
+			}
+		}
+	});
+	
 	$('.left__arrow').parent().on('click', function (){
 
-		// var a = $('.right__arrow').parent().css('left');
-		// alert(a);
-
-		$(this).parent().prev().stop().animate({
-			left: '-=25%'
-		}, 400).append('<li><div class="video__item__layout"><div class="infor__icon__layout"><div class="infor__icon">i</div><div class="close__infor__icon"><div class="xbar1"></div><div class="xbar2"></div></div></div><div class="video__infor__layout"><div class="video__infor__summary"><div class="summary__content"><h3>영상 제목</h3><p>요약 내용<br>이제 비공개로 인터넷을 탐색할 수 있으며, 이 기기를 사용하는 다른 사용자가 내 활동을 볼 수 없습니다. 하지만 다운로드, 북마크, 읽기 목록 항목은 계속해서 저장됩니다. 자세히 알아보기</p><p>lsdfa;j</p></div></div></div><div class="video__thumb__layout"><img src="#" alt="no"></div></div></li>');
-	});
-	$('.right__arrow').parent().on('click', function (){
-		if($(this).parent().prev().css('left') >= '0px'){
+		if($(this).parent().prev().css('left') >= '0px')
+		{
 			$(this).parent().prev().css('left', '0px');
-			// alert('not enough content');
-		}else{
+		}
+		else if($(this).parent().prev().css('left') < '0px')
+		{
 			$(this).parent().prev().stop().animate({
-				left: '+=25%'
+				left: '+=75%'
 			}, 400);
-			// if($('.li__clone').css('left') > $(){
-			// 	$('.li__clone').remove();
-			// }
 		}
 	});
 });

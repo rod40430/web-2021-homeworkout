@@ -14,17 +14,17 @@ $row = mysqli_fetch_array($result);
 
 if($pass != $passck){
     echo "<script>alert('비밀번호가 일치하지않습니다.');
-    history.back();
+    location.href = '/web/resister.php';
     </script>";
 }
 else if($id == null || $pass == null || $name == null || $phone == null) {
     echo "<script>alert('아직 입력안한 창이있습니다.');
-    history.back();
+    location.href = '/web/resister.php';
     </script>";
 }
 else if ($id == $row['u_email']){
     echo "<script>alert('중복되는 아이디가 있습니다.');
-    history.back();
+    location.href = '/web/resister.php';
     </script>";
 }
 else{

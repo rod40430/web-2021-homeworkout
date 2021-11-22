@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    if($_SESSION['rank'] != 10){
+        echo "
+        <script>
+            alert('관리자 전용기능입니다.');
+            history.back();
+        </script>";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,43 +1,13 @@
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    color: white;
-}
 
-body{
-    color: white;
-    font-family: 'NanumSquare', sans-serif;
-    background-color: #2b2b2b;
-}
+/* 초기화 */
+*{margin: 0;    padding: 0;    list-style: none;}
+a{text-decoration: none;    color: white;}
+body{color: white;    font-family: 'NanumSquare', sans-serif;    background-color: #2b2b2b;    position: relative;}
+section, footer{width: 100%;}
+section{position: relative;}
+.h208 ul, .h260 ul, #rank ul{position: absolute;}
 
-article, section, footer{
-    background-color: #161616;
-}
-
-/* 모든 ul 플랙스화 및 중앙으로(?) 정렬 */
-ul{
-    display: flex;
-    align-items: center;
-}
-
-/* 클릭 할 글자들의 기본 설정 */
-.nav li, footer li{
-    color: rgb(148, 148, 148);
-    transition: all 0.4s;
-    cursor: pointer;
-}
-
-/* 헤더와 푸터 안 li들의 간격과 폰트 크기 */
-header .nav li, footer li{
-    text-align: center;
-    margin: 0px 1.2vmax;
-    font-size: 1.2rem;
-}
 
 /* --------------------------------헤더------------------------------------- */
 
@@ -50,13 +20,17 @@ header{
     height: 6vw;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.287);
-    transition: all 0.4s;
+    /* transition: all 0.4s; */
 }
 /* 좌, 우 div 플렉스화 및 정렬 */
 header div{
     display: flex;
     align-items: center;
     text-align: center;
+}
+header ul{
+    display: flex;
+    align-items: center;
 }
 
 
@@ -67,7 +41,16 @@ header div{
     margin: 14px 2vmin;
 
 }
-.nav li:hover{
+/* 네비 메뉴 안 li */
+header .nav li{
+    color: rgb(148, 148, 148);
+    transition: all 0.4s;
+    cursor: pointer;
+    text-align: center;
+    margin: 0px 1.2vmax;
+    font-size: 1.2rem;
+}
+header .nav li:hover{
     padding:0 8px;
     font-size: 1.2rem;
     color: white;
@@ -184,257 +167,186 @@ header div{
 
 /* ------------------------------ 콘텐츠 ------------------------------- */
 
-/* --------------------- 콘텐츠 > 최상단 영역 --------------------- */
-
-/* 최상단 배경 */
-.head__layout{
-    height: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(43, 43, 43, 1)), url(../image/main.png);
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: static;
-    top: 0%; */
-}
-
-.top__video > video{
-    width: 100%;
-}
-
-/* 미리보기 및 시작 버튼 위치 */
-.start__btn{
+/* collider */
+/* .colliders{
     position: absolute;
-    bottom: 10%;
-    left: 3%;
 }
 
-/* 미리보기 버튼 */
-.head__layout div button:nth-child(1){
-    background: rgb(12, 12, 12);
-    color: white;
+#recommend__collider{
+    outline: 1px solid red;
+    width: 100%;
+    height: 10%;
+    margin-top: 10%;
 }
-
-/* 버튼 기본설정 */
-.head__layout div button{
-    width: 8vmax;
-    height: 3vmax;
-    transition: all 0.3s linear;
-    font-size: 1.4vmax;
-    font-weight: bold;
-    border: 0;
-    border-radius: 0.4vw;
-    margin-right: 0.6vw;
-    cursor: pointer;
-}
-.head__layout div button:hover{
-    transform: scale(1.2);
-}
-
-
-/* ----------------------- 콘텐츠 > 각 영역 ----------------------- */
-
-/* 각 섹션 */
-.con__layout{
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-bottom: 4px;
-    /* background-color: #161616; */
-}
-
-/* 섹션 제목 영역 */
-.contentTitle{
-    padding-left: 6vmin;
-}
-.contentTitle > h1{
-    font-size: 3rem;
-}
-
-/* 영상들(리스트 아이템(li))이 보일 영역 */
-.content{
-    margin: 3vmax 0 6vmax 0;
-    position: relative;
-    padding-left: 4vmin;
-}
-
-/* 각li */
-/* .content li{
-    background-color: #141414;
-    width: 24vmax;
-    height: 28vmax;
-    margin: 20px 1vmax;
-    border-radius: 10px;
-    transition: all 0.2s linear;
-    overflow:hidden;
-    display: flex;
-    flex-direction: row-reverse;
-    position: relative;
+#rank__collider{
+    outline: 1px solid blue;
+    width: 100%;
+    height: 10%;
 } */
 
-/* li 내 영상 정보 및 썸네일 설정들 */
+#top{
+    width: 100%;
+    height: 100vh;
+    background-color: #2b2b2b71;
+}
+#top > video{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+}
 
-.video__item__layout{
-    width: 24vmax;
-    height: 28vmax;
-    margin: 0 1vmax;
-    border-radius: 10px;
-    transition: all 0.8s;
-    overflow:hidden;
+
+/* 첫번째 줄 강제 이동 */
+#first__section{
+    display: flex;
+    align-items: flex-end;
+    height: 15vh;
+}
+#first__section h3{
     position: relative;
-    cursor: pointer;
 }
 
-.video__item__layout div{
-    position: absolute;
-}
-
-.video__infor__layout{
-    width: 200%;
-    height: 200%;
-    background-color: #585858;
-    top: -164%;
-    left: -164%;
-    z-index: 5;
-    transition: all 0.8s;
-    transform: rotate(-45deg);
+/* 해상도 208인 줄 전체 -------------------------------------------------------------------------------------- */
+.h208{
+    width: 100%;
+    height: 32vh;
     overflow: hidden;
 }
 
-.video__infor__summary{
-    width: 50%;
-    height: 50%;
-    transform: rotate(49.45deg);
+/* 각 줄 제목 */
+.h208 > h3{
+    margin: 4vmin 0 2vmin 2%;
+    color: white;
+    font-size: 1.3rem;
+}
+/* 각 줄 영상이 나열될 영역 */
+.h208__video__layout{
+    margin-left: 2%;
+    /* outline: 1px solid red; */
+    display: flex;
+}
+/* 영상들 */
+.h208__video{
+    margin-right: 1vmin;
+    background-color: olive;
+    width: 27.5vmin;
+    height: 20.8vmin;
+    border-radius: 0.6vmin;
+}
+.video__item{
+    position: relative;
+    overflow: hidden;
+}
+.thumbnail{
     position: absolute;
-    top: 74.7%;
-    left: 23%;
-    /* background-color: #4674ff32; */
-    display: none;
+    width: 100%;
+}
+.title__layout{
+    transition: all 0.3s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a4;
+    color: #fff;
+    opacity: 0;
+}
+.title__layout > h3{
+    width: 100%;
+    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s;
-}
-.summary__content{
-    margin-right: 6%;
-    width: 60%;
-    height: 80%;
-}
-.summary__content > h3{
-    /* outline: 1px solid red; */
-    height: 10%;
-}
-.summary__content > p:nth-child(2){
-    /* outline: 1px solid red; */
-    margin: 10% -15%;
-    width: 80%;
-    height: 30%;
-}
-.summary__content > p:nth-child(3){
-    /* outline: 1px solid red; */
-    margin: 10% -15%;
-    width: 40%;
-    height: 12%;
+    position: absolute;
+    left: -5%;
 }
 
-.video__thumb__layout{
+/* 해상도 260인 줄 전체 --------------------------------------------------------------------------------------- */
+.h260{
     width: 100%;
-    height: 100%;
-    background-color: rgba(93, 93, 93, 0.5);
-    z-index: 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.video__thumb__layout > img{
-    width: 100%;
+    height: 37vh;
+    overflow: hidden;
 }
 
-.a{
-    width: 100%;
-}
-
-.infor__icon__layout{
-    width: 10vmax;
-    height: 10vmax;
-    position: relative;
-    /* border: 1px solid red; */
-    z-index: 6;
-    opacity: 0.25;
-    transition: all 0.33s;
-    transform: rotate(-45deg);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    top: -18.6%;
-    left: -22%;
-}
-.infor__icon__layout:hover{
-    opacity: 1;
-}
-
-.infor__icon{
-    width: 2vmax;
-    height: 2vmax;
-    margin: 8%;
-    border: 4px solid white;
+/* 각 줄 제목 */
+.h260 > h3{
+    margin: 5vmin 0 2vmin 2%;
     color: white;
-    font-size: 1.6rem;
-    font-weight: bold;
-    border-radius: 50%;
+    font-size: 1.3rem;
+}
+/* 각 줄 영상이 나열될 영역 */
+.h260 > .h260__video__layout{
+    margin-left: 2%;
+    /* outline: 1px solid red; */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(45deg);
-    position: absolute;
 }
-.close__infor__icon{
-    width: 2vmax;
-    height: 2vmax;
-    position: absolute;
-    border: 4px solid transparent;
-    margin: 8%;
-    display: none;
-    justify-content: center;
-    transform: rotate(45deg);
+/* 영상들 */
+.h260__video{
+    margin-right: 1vmin;
+    background-color: orange;
+    width: 27.5vmin;
+    height: 26vmin;
+    border-radius: 0.6vmin;
 }
 
-.video__thumb{
+/* 해상도 260 기타 설정 */
+.other{
+    height: 41vh;
+}
+#children__HT > h3{
+    margin: 13vmin 0 2vmin 2%;
+}
+#children__HT{
+    height: 64vh;
+}
+
+/* 랭킹 줄 전체 --- 해상도 : 293 x 210 --------------------------------------------------------------------- */
+.rank__layout{
     width: 100%;
+    height: 35vh;
+    overflow: hidden;
+}
+/* 각 줄 제목 */
+.rank__title{
+    margin: 5vmin 0 2vmin 2%;
+    color: white;
+    font-size: 1.3rem;
+}
+/* 각 줄 영상이 나열될 영역 */
+.rank__layout > .rank__video__line{
+    margin-left: 4%;
+    /* outline: 1px solid red; */
+    display: flex;
+}
+/* 영상들 */
+.rank__video{
+    margin-right: 1vmin;
+    background-color: salmon;
+    width: 26.3vmin;
+    height: 18.9vmin;
+    border-radius: 0.6vmin;
+}
+.thumb__layout{
+    position: absolute;
 }
 
-/* 순위 아이콘(?) */
-.rank{
-    width: 0;
-    height: 0;
-    border-top: 100px solid #4675ff;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-    position: absolute;
-    z-index: 8;
-    right: 0;
-    cursor: default;
-}
-.rank div{
-    position: absolute;
-    width: 100px;
-    left: -25px;
-    top: -80px;
-    font-size: 2.1rem;
-}
+/* 이동 버튼 --------------------------------------------------------------------------------------------- */
 
 /* 이동 버튼 위치 */
 .btn__locate{
     width: 100%;
-    height: 100%;
     display: flex;
-    justify-content: space-between; /* 양옆에 배치 */
-    align-items: flex-end;
-    /* align-items: flex-end;          플랙스 아이템 아래로(아래에?) 정렬 */
-    position: absolute;
+    justify-content: flex-end; /* 양옆에 배치 */
+    /* position: relative; */
+}
+.h208__btn{
+    height: 20.8vmin;
+}
+.h260__btn{
+    height: 26vmin;
+}
+.rank__btn{
+    height: 18.9vmin;
 }
 
 /* 이동 버튼 영역 */
@@ -442,15 +354,14 @@ header div{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4vmax;
-    height: 28vmax;
+    width: 6vmin;
+    height: 100%;
     z-index: 9;
     opacity: 0;
     background-color: rgb(12, 12, 12);
     border: 0;
     transition: all 0.1s linear;
     cursor: pointer;
-    margin-bottom: 6vmax;
 }
 .move__btn:hover{
     opacity: 100;
@@ -458,20 +369,19 @@ header div{
 
 /* 이동 버튼 화살표 */
 .right__arrow{
-    margin-left: 0.2vmax;
-	border-top: 1.2vmax solid transparent;
-	border-bottom: 1.2vmax solid transparent;
-    border-left: 2vmax solid white;
+    margin-left: 0.2vmin;
+	border-top: 1.2vmin solid transparent;
+	border-bottom: 1.2vmin solid transparent;
+    border-left: 2vmin solid white;
     z-index: 10;
 }
 .left__arrow{
-    margin-left: -0.2vmax;
-	border-top: 1.2vmax solid transparent;
-	border-bottom: 1.2vmax solid transparent;
-    border-right: 2vmax solid white;
+    margin-left: -0.2vmin;
+	border-top: 1.2vmin solid transparent;
+	border-bottom: 1.2vmin solid transparent;
+    border-right: 2vmin solid white;
     z-index: 10;
 }
-
 
 /* ---------------------------영상 영역---------------------------- */
 .modal__layout{
@@ -551,29 +461,44 @@ header div{
 }
 
 
-/* -------------------------------이벤트 영역------------------------------ */
-.event__layout{
+/* 푸터 -------------------------------------------------------------------------------------------------- */
+footer{
+    border-top: 3px solid #737373;
     width: 100%;
-    height: 16vw;
+    height: 24vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    margin-bottom: 4px;
 }
-
-/* -----------------------Footer----------------------- */
-footer{
-    height: 24vw;
-    width: 100%;
+#footer__inner__layout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#footer__logo{
+    width: 10vw;
+}
+#footer__menu{
     display: flex;
     align-items: center;
-    font-size: 1.4vmax;
 }
-footer ul li:hover{
-    color: white;
-    cursor: pointer;
+#footer__menu > li > select{
+    background-color: #2b2b2b;
+    border: 0;
+    color: #737373;
+    font-size: 1rem;
 }
+footer select:focus{
+    outline: none;
+}
+#footer__menu > li{
+    margin: 1vmin;
+    color: #737373;
+}
+footer a{
+    color: #737373;
+}
+
 
 /* -----------------------media query----------------------- */
 

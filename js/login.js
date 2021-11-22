@@ -22,6 +22,12 @@ function dis(){
     $('#u_j').show();
     $('#login').hide();
   }
+  function soon(){
+    alert('SOOOOOOOOOOON');
+  }
+  function email(){
+    location.href = "/web/email.php";
+  }
   
   function ag(agtext, kcn){
     if($('.'+ agtext + '_s_text').css('display') == 'none'){

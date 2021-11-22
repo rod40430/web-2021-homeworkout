@@ -1,4 +1,5 @@
 <?php
+    ini_set('display_errors', '0');
     require_once '../email/PHPMailer-master/src/PHPMailer.php';
     require_once '../email/PHPMailer-master/src/SMTP.php';
     require_once '../email/PHPMailer-master/src/Exception.php';
@@ -32,7 +33,13 @@
         }
         return $result;
     }
+    $email = $_POST['email'];
     $code = sprintf(rand(100000,999999));
-    setcookie("code", $code, time() + 180);
-    sendMail("xogns40430@naver.com", "인증코드 : $code");
+    session_start();
+    $_SESSION['code'] = $code;
+    sendMail($email, "인증코드 : $_SESSION[code]");
+    echo "<script>
+        alert(`인증코드를 발송했습니다.`);
+        </script>";
+    header("location: /web/emailck.php");
 ?>

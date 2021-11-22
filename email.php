@@ -7,21 +7,16 @@
     <title>이메일 인증</title>
     <link rel="stylesheet" href="./css/email.css">
     <script src="./js/email.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <div id="container">
         <img src="./image/logo_w.png" alt="logo">
         <h3>이메일 주소 인증</h3>
         <div id="input__layout">
-            <div id="write__email">
-                <input type="text" name="email" placeholder="이메일">
+            <form id="write__email" action="./php/email.php" method="post">
+                <input type="email" name="email" placeholder="이메일">
                 <input id="email__submit" type="submit" value="인증하기">
-            </div>
-            <div id="write__access__code">
-                <input type="text" name="access__code" placeholder="이메일 인증코드">
-                <input id="code__submit" type="submit" value="확인">
-            </div>
+            </form>
         </div>
     </div>
 </body>

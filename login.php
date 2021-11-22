@@ -85,6 +85,7 @@
                     <div class="u_infor"><div class="j_text">이름</div><input class="j_name" type="text" name="j_name"></div><br>
                     <div class="u_infor"><div class="j_text">휴대번호</div><input class="j_phone" type="text" name="j_phone" placeholder="번호만 입력해주세요."></div><br>
                     <input type="submit" value="회원가입" id="user_button"><br>
+                </form>
             </div>
         </section>
     </div>
@@ -95,12 +96,12 @@
                 <div class="ck_user">본인인증</div>
                 <div class="join_ck">인증방식 선택</div>
                 <div class="button_boder1">
-                <button id="u_button1" onclick="button()">휴대폰 본인 인증</button>
+                <button id="u_button1" onclick="soon()">휴대폰 본인 인증</button>
                 <div class="button_boder2"></div>
-                <button id="u_button2" onclick="button()">이메일 인증</button>
+                <button id="u_button2" onclick="email()">이메일 인증</button>
                 </div>
                 <div class="ck_text">다음 약관에 동의해주세요</div>
-                <form method="post" action="#">
+                <form method="post" action="./email.php">
                     <div class="s_ucon">
                     <div class="all_text"><input  type="checkbox" id="all_ck" name="all_check" onclick="selectAll(this)">전체동의</div>
                     <div class="user1_text"><div class="user_kc"><input  type="checkbox" class="user_ck" name="check" onclick="checkSelectAll()">[필수]이용약관 동의</div> <div class="kc1" onclick="ag('user1', '1')"><a href="#" class="a_kc"> > </a></div></div>
@@ -112,7 +113,6 @@
                     <div class="ev_text"><div class="user_kc"><input  type="checkbox" class="user_ck" name="check" onclick="checkSelectAll()">[선택]할인및 이벤트 소식 메일 수신 동의</div> <div class="kc4" onclick="ag('ev','4')"><a href="#" class="a_kc">></a></div></div>
                     <div class="ev_s_text">이벤트 내용</div>
                     </div>
-                    <input type="button" value="확인" id="user_button" onclick="join_user()"><br>
                 </form>
             </div>
         </section>
