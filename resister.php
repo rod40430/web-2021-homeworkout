@@ -25,7 +25,7 @@
 <body>
     <div id="j_m">
         <section class="join_member">
-            <img class="jm_logo" src="./image/logo_w.png">
+            <a href="./login.php"><img class="jm_logo" src="./image/logo_w.png"></a>
             <div id="jcon">
                 <div class="join_text">회원가입</div>
                 <form method="post" action="./php/signup.php">
@@ -36,7 +36,7 @@
                     <div class="u_infor"><div class="j_text"></div><input class="j_phone" type="text" name="j_phone" placeholder="휴대폰번호(번호만입력)"></div><br>
                     <input type="submit" value="회원가입" id="user_button"><br>
                 </form>
-                <a href="./web/login.php"><button id="exit_btn">이미 회원이신가요?&nbsp;<p>로그인하기</p></button></a>
+                <a href="./login.php"><button id="exit_btn">이미 회원이신가요?&nbsp;<p>로그인하기</p></button></a>
             </div>
         </section>
     </div>

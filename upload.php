@@ -1,5 +1,6 @@
 <?php
     session_start();
+    ini_set('display_errors', '0');
     if($_SESSION['rank'] != 10){
         echo "
         <script>
@@ -38,18 +39,19 @@
             <p>영상 등급 : <input type="text" name="vr_rank"></p>
             <input type="submit" value="업로드">
         </form>
-    
+            <div class="v_div">
+                <div class="video">
         <?php
             while($row = mysqli_fetch_array($result)){
         ?>
-                <div class="v_div">
-                    <div class="video">
+                    
                         <video src="<?=$row['v_url'].$row['video_name']?>.mp4" controls></video>
-                    </div>
-                </div>
+                    
         <?php
             }
         ?>
+                </div>
+            </div>
     </div>
 </body>
 </html>

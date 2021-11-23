@@ -89,3 +89,20 @@ input:focus{
     margin-left: 5vw;
 }
 
+.v_div {
+    display: flex;
+    position: relative;
+}
+
+.video {
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-items: stretch;
+}
+
+.video video {
+    flex-direction: column;
+    text-align: center;
+}

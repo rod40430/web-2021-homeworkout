@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="container">
-        <img src="./image/logo_w.png" alt="logo">
+        <a href="./login.php"><img src="./image/logo_w.png" alt="logo"></a>
         <h3>인증 코드 입력</h3>
         <div id="input__layout">
             <form id="write__access__code" action="./resister.php" method="post">

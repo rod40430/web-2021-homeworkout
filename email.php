@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="container">
-        <img src="./image/logo_w.png" alt="logo">
+        <a href="./login.php"><img src="./image/logo_w.png" alt="logo"></a>
         <h3>이메일 주소 인증</h3>
         <div id="input__layout">
             <form id="write__email" action="./php/email.php" method="post">
