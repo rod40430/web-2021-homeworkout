@@ -44,8 +44,8 @@ else{
                 <!-- 네비 바 -->
                 <ul class="nav">
                     <li onclick="Move('top')">HOME</li>
-                    <li onclick="Move('recommend')">오늘의 홈트</li>
-                    <li onclick="Move('recommend')">추천 홈트</li>
+                    <li onclick="Move('recommend')">오늘의 추천 홈트</li>
+                    <!-- <li onclick="Move('recommend')">추천 홈트</li> -->
                     <li onclick="Move('rank')">인기 홈트</li>
                     <li onclick="soon()">내가 찜한 콘텐츠</li>
                 </ul>

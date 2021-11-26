@@ -96,7 +96,7 @@ function ShowBar(){
 $(window).scroll(function(){
 	let targetTop = $('#watching').offset();
 	let styleObj = {
-		'background-color' : '#2b2b2b'
+		'background-color' : '#161616'
 	};
 
 	if($(window).scrollTop() > 1){
