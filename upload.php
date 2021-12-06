@@ -43,10 +43,8 @@
                 <div class="video">
         <?php
             while($row = mysqli_fetch_array($result)){
-        ?>
-                    
-                        <video src="<?=$row['v_url'].$row['video_name']?>.mp4" controls></video>
-                    
+        ?>  
+                        <video src="<?=$row['v_url'].$row['video_name']?>.mp4" controls></video>    
         <?php
             }
         ?>

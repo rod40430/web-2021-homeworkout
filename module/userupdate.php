@@ -16,7 +16,7 @@
         position: relative;
         /* background-color: #2b2b2b; */
         height: 100vh;
-        background-image: url(<?=$link?>);
+        background-image: url(../image/conten1_top.jpg);
         /* background-repeat: no-repeat; */
         /* background-size: cover; */
     }

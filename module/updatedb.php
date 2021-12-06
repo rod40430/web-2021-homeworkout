@@ -53,5 +53,18 @@
             </script>";
     }
 
+    function userdel () {
+        $conn = mysqli_connect('localhost', 'root', '123456', 'ht');
+        $userid = $_SESSION['id'];
+        $sql = "delete from user where u_email = '$userid'";
+        $result = mysqli_query($conn, $sql);
+        session_destroy();
+        echo '
+        <script>
+            alert("계정삭제가 완료되었습니다.");
+            location.href = "/web/login.php";
+        </script>';
+    }
+
     $type();
 ?>
