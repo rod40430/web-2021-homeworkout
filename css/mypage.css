@@ -157,6 +157,7 @@ header div{
 .user{
     width: 4vw;
     margin-right: 6vmin;
+    /* position: relative; */
 }
 #upArrow{
     width: 0;
@@ -170,8 +171,8 @@ header div{
 }
 .small__layout{
     position: absolute;
-    top: 96%;
-    right: 2.9vw;
+    top: 11%;
+    right: 2.8vw;
     width: 200px;
     height: 180px;
     /* border: 1px solid red; */
@@ -232,6 +233,9 @@ header div{
 .wrap{
     width: 100%;
     border-bottom: 1px solid #c3c3c3;
+}
+.wrap:last-child{
+    border: none;
 }
 
 #MyPage__title{

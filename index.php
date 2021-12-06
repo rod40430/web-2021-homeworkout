@@ -2,11 +2,11 @@
 session_start();
 ini_set('display_errors', '0');
 if(isset($_SESSION['id'])){
-    echo "
-    <script>
-    alert('{$_SESSION['name']}님 환영합니다.');
-    </script>
-    ";
+    // echo "
+    // <script>
+    // alert('{$_SESSION['name']}님 환영합니다.');
+    // </script>
+    // ";
 }
 else{
     echo '

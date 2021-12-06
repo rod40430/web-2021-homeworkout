@@ -142,14 +142,14 @@
                     </div>
                 </section>
             </div>
-            <div id="set__profile__img" class="wrap flexs">
+            <!-- <div id="set__profile__img" class="wrap flexs">
                 <h3 class="front">프로필 사진 설정</h3>
                 <section class="back flexs">
                     <div class="profile__imgs flexs"><img src="./image/profile/profile2.png" alt="카드값줘 체리"><a href="#">카드값줘 체리</a></div>
                     <div class="profile__imgs flexs"><img src="./image/profile/profile3.png" alt="짱구는 옷말려"><a href="#">짱구는 옷말려</a></div>
                     <div class="profile__imgs flexs"><img src="./image/profile/profile4.png" alt="빛나는 비바리"><a href="#">빛나는 비바리</a></div>
                 </section>
-            </div>
+            </div> -->
         </section>
     </section>
 </body>

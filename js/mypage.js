@@ -18,4 +18,13 @@ window.onload = function(){
             console.log("0");
         }
     }
+
+    $(".user").on('click', function (){
+		if($('.small__layout').css('display') == 'none'){
+			$('.small__layout').css('display', 'flex');
+		}
+		else{
+			$('.small__layout').css('display', 'none');
+		}
+	});
 }
