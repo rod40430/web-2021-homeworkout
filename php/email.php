@@ -1,4 +1,10 @@
 <?php
+    if($email == null){
+        echo "<script>
+            alert('메일 작성을 해주세요');
+            history.back();
+        </script>";
+    }
     ini_set('display_errors', '0');
     require_once '../email/PHPMailer-master/src/PHPMailer.php';
     require_once '../email/PHPMailer-master/src/SMTP.php';
