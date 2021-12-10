@@ -1,44 +1,275 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
 *{
+    margin: 0;
+    padding: 0;
     list-style: none;
-    margin: 0px;
-    padding: 0px;
-    font-family: '나눔 스퀘어';
+    font-family: 'NanumSquare', sans-serif;
 }
-#upload__all{
+body{
+    height: 100%;
+    /* background-color: antiquewhite; */
+}
+.bgcr{
     background-color: #2b2b2b;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h3, h5, li, p, button, #input-file{
+    color: white;
+    /* font-weight: bold; */
+}
+
+
+/* modal ----------------------------------------------- */
+.modal{
+    position: fixed;
+    z-index: 12;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
-    display: flex;
-    /* flex-direction: column; */
-    /* justify-content: center;
-    align-items: flex-start; */
-    /* position: relative; */
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
-#upload__body{
-    background-color: #515050;
-    width: 18.5vw;
-    height: 100%;
+.upload__modal{
+    width: 50vw;
+    height: 35vw;
+    background-color: #2b2b2b;
+    border-radius: 1.2vmin;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.modal .title{
+    width: 100%;
+    height: 6vmin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #504f4f;
+}
+.title > h3{
+    margin-top: 1vmin;
+    margin-left: 1.4vmin;
+}
+.content__upload__div{
+    /* outline: 1px dashed red; */
+    width: 90%;
+    height: 90%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.progress__div{
+    /* outline: 1px solid aqua; */
+    width: 90%;
+    height: 16%;
+    display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+.progress__top{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.progress__top h5{
+    width: 14%;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 1vmin;
+}
+.progress__bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progress__bottom img{
+    width: 2vmin;
+    height: auto;
+}
+.progress__bar{
+    width: 26%;
+    /* position: absolute; */
+    outline: 1px solid #504f4f;
+}
+.video__infor__div{
+    /* outline: 1px solid goldenrod; */
+    width: 100%;
+    height: 84%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     position: relative;
 }
-.logo__img{
-    width: 13vw;
-    position: fixed;
-    top: 10px;
-    left: 1%;
+.video__infor__title{
+    width: 60%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
 }
-#exit{
-    width: 2vw;
-    height: 2vw;
+.video__title{
+    width: 56%;
+    height: 16%;
+    margin-bottom: 3%;
+    padding: 0 2%;
+}
+.video__title::placeholder{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.video__introduce{
+    max-width: 58%;
+    max-height: 22%;
+    margin-bottom: 3%;
+    padding: 1% 1%;
+    resize: none;
+}
+.outline__css{
+    border: none;
+    outline: 2px solid #504f4f;
+    border-radius: 1vmin;
+    color: white;
+}
+.outline__css:hover, .other input:hover, .other select:hover{
+    outline: 2px solid white;
+}
+.outline__css::placeholder{
+    color: white;
+}
+.thumbnail__upload__div{
+    /* outline: 1px solid yellow; */
+    width: 60%;
+    height: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.thumbnail__upload__div > div{
+    /* outline: 1px solid greenyellow; */
+    display: flex;
+}
+.thumbnail__upload__div > div > label{
+    width: 14vmin;
+    height: 14vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 2px dotted #504f4f;
+    border-radius: 1vmin;
+    margin-right: 1vmin;
     cursor: pointer;
+}
+.thumbnail__upload__div > div > label:hover{
+    outline: 2px dotted white;
+}
+.thumbnail__upload__div > div > img{
+    height: 14vmin;
+}
+.thumbnail{
+    max-width: 64%;
+    max-height: 14vmin;
+}
+#m_up, #input-file, #cancle__btn{
+    display: none;
+}
+.video__upload__div{
+    /* outline: 1px solid red; */
+    background-color: #242424;
+    width: 36%;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    right: 4%;
-    top: 3%;
-    /* border: 1px solid red; */
-    /* border-radius: 50%; */
+    right: 0;
+}
+.video__upload__div video{
+    /* outline: 1px solid white; */
+    background-color: #1d1d1d;
+    width: 100%;
+}
+.input__div{
+    /* outline: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input__div #input-file{
+    margin: 0.6vmin 0 0 1.4vmin;
+}
+.input__div img{
+    margin: 2vmin;  
+    width: 10vmin;
+    cursor: pointer;
+}
+
+.other{
+    background-color: #2b2b2b;
+    position: absolute;
+    left: 110%;
+    width: 24vmin;
+    height: 34vmin;
+    /* outline: 1px solid #fe7373; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.2vmin;
+}
+.other select, .other input{
+    border: none;
+    outline: 2px solid #504f4f;
+    color: white;
+    margin-left: 2vmin;
+}
+.other select{
+    width: 9vmin;
+    height: 3.2vmin;
+    border-radius: 0.6vmin;
+}
+.other input{
+    width: 10vmin;
+    height: 1.4vmin;
+    border-radius: 0.6vmin;
+    padding: 0.8vmin;
+}
+.other p{
+    margin: 1.2vmin 0 0.6vmin 2vmin;
+}
+.upload__btn{
+    width: 6vmin;
+    height: 3.6vmin;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 0.6vmin;
+    position: absolute;
+    bottom: 0;
+    right: -4.8%;
+    cursor: pointer;
+}
+
+
+/* 나가기 버튼 */
+#exit{
+    width: 1.2vw;
+    height: 1.2vw;
+    margin-top: 1vmin;
+    margin-right: 2.4vmin;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,8 +277,8 @@
 .xbar1, .xbar2{
     position: absolute;
     transform: rotate(45deg);
-    width: 0.2vw;
-    height: 1.5vw;
+    width: 0.1vw;
+    height: 1.2vw;
     background-color: white;
     border: 1px solid transparent;
     border-radius: 0.2vw;
@@ -55,58 +286,331 @@
 .xbar2{
     transform: rotate(-45deg);
 }
-#upload__body p{
-    color: #fff;
-    line-height: 3vh;
-    display: flex;
-    margin: 1.5vh 1vw;
-}
-#upload__body input[type=file]{
-    display: none;
-}
-#upload__body label{
-    cursor: pointer;
-    margin-left: 1vw;
-}
-#upload__body label>img{
-    width: 4.5vw;
 
-}
-#upload__body input[type=text]{
-    background-color: #515050;
-    border: 0;
-    border-bottom: 1px solid white;
-    margin-left: 0.5vw;
-    color: #fff;
-}
-input:focus{
-    outline:none;
-}
-#upload__body input[type=submit]{
-    width: 5vw;
-    height: 3vh;
-    margin-top: 2vh;
-    margin-left: 5vw;
-}
 
-.v_div {
-    width: 100vw;
-    height: 100%;
-    display: flex;
-    position: relative;
+/* header ------------------------------ */
+header{
+    position: fixed;
+    width: 100%;
+    height: 4vw;
+    border-bottom: 1px solid #737373;
+    z-index: 10;
 }
-
-.video {
+#header__div{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    flex-wrap: wrap;
+    align-items: center;
+}
+#header__div img{
+    margin-left: 2vw;
+    height: 90%;
 }
 
-.video video {
-    margin: 1%;
-    width: 30%;
-    height: 30%;
+
+/* body -------------------------------------------------------- */
+.under__the__header{
+    padding-top: 4.2vw;
 }
+
+/* aside --------------------------------------------------- */
+aside{
+    z-index: 9;
+    border-right: 1px solid #737373;
+    position: fixed;
+    width: 12vmin;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* profile */
+#profile{
+    width: 100%;
+}
+#profile__div{
+    width: 80%;
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12%;
+    margin-left: 6%;
+}
+#profile__icon{
+    width: 80%;
+    /* outline: 1px solid aqua; */
+}
+#profile__name{
+    /* outline: 1px solid green; */
+    font-size: 0.9rem;
+    margin: 8% 0;
+}
+#logout__btn{
+    width: 68%;
+    height: 2.4vmin;
+    background-color: #504f4f;
+    /* outline: 1px solid orange; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 0;
+    font-size: 0.64rem;
+    cursor: pointer;
+}
+#logout__btn:hover{
+    outline: 1px solid white;
+}
+
+/* menu */
+nav{
+    margin-top: 10%;
+    width: 100%;
+    /* outline: 1px solid red; */
+}
+#menu{
+    width: 100%;
+    /* outline: 1px solid aqua; */
+    display: flex;
+    flex-direction: column;
+}
+#menu > li{
+    width: 100%;
+    line-height: 3.4vmin;
+    /* outline: 1px solid yellow; */
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+/* #menu > li:nth-child(1){
+   background-color: #504f4f; 
+   color: #2b2b2b;
+} */
+#menu > li > .front{
+    width: 24%;
+    /* outline: 1px solid orange; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#menu > li > .back{
+    width: 61%;
+    display: flex;
+    align-items: center;
+    /* outline: 1px solid aqua; */
+}
+
+li img{
+    /* outline: 1px solid greenyellow; */
+    /* margin-right: 10%; */
+    height: 58%;
+}
+li:nth-child(1) img{
+    margin-right: 10%;
+    height: 50%;
+}
+
+/* right__side ---------------------------------------------- */
+#right__side{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+#right__side > section{
+    height: 100%;
+}
+
+/* 대시보드 */
+#dashboard{
+    /* margin-left: 16vmin; */
+    /* width: 74.4%; */
+    height: 71vh;
+    /* background-color: orange; */
+    margin-top: 1vw;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#dashboard > section{
+    /* background-color: aqua; */
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+#dashboard .title{
+    /* background-color: antiquewhite; */
+    width: 42vmin;
+    line-height: 4vmin;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    /* margin-left: 16vmin; */
+}
+
+#content{
+    /* height: 71vh; */
+    display: none;
+    justify-content: center;
+    /* outline: 1px solid red; */
+    margin-top: 2vmin;
+}
+.content__layout{
+    width: 87%;
+    height: 71vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* outline: 1px solid purple; */
+    overflow: auto;
+}
+.content__layout::-webkit-scrollbar, .video__introduce::-webkit-scrollbar{
+    width: 1vmin;
+}
+.content__layout::-webkit-scrollbar-thumb, .video__introduce::-webkit-scrollbar-thumb{
+    background-color: #fe7373;
+    border-radius: 0.5vmin;
+}
+.content__layout::-webkit-scrollbar-track, .video__introduce::-webkit-scrollbar-track{
+    background-color: #504f4f;
+    border-radius: 0.5vmin;
+}
+.content__layout video{
+    width: 16vmax;
+    margin: 1vmin 0;
+}
+#content > img{
+    height: 40%;
+    margin-bottom: 4vmin;
+    border-radius: 2vmin;
+}
+
+
+/* 내용물 배경 꾸미기 ---------------------------------- */
+
+/* 바깥쪽 div */
+#dashboard > section > div{
+    width: 42vmin;
+    background-color: #504f4f;
+    border-radius: 0.4vmin;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 각 바깥쪽 div 높이 */
+#dashboard > section > div{
+    height: 100%;
+}
+/* #dashboard > section > div:nth-child(2){
+    margin-right: 4vmin;
+    width: 67vmax;
+} */
+
+/* 안쪽 div */
+.inner__div{
+    width: 94%;
+    border: 0.3vmin dashed #737373;
+    border-radius: 0.4vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 각 안쪽 div 설정 */
+#dashboard > section > div .inner__div{
+    height: 95%;
+}
+/* #dashboard > section > div:nth-child(2) .inner__div{
+    width: 98.2%;
+} */
+
+#upload__div{
+    width: 100%;
+    height: 40%;
+    /* background-color: rgba(127, 255, 212, 0.233); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+#upload__div > img{
+    width: 30%;
+}
+#upload__div > button{
+    width: 25%;
+    height: 14%;
+    border-radius: 1vmin;
+    border: 0;
+    background-color: rgb(28, 26, 26);
+    cursor: pointer;
+}
+
+
+/* 푸터 -------------------------------------------------- */
+#right__side > footer{
+    /* background-color: red; */
+    border-top: 1px solid #737373;
+    width: 100%;
+    height: 16vmin;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer__inner__layout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#footer__logo{
+    width: 10vw;
+}
+#footer__menu{
+    display: flex;
+    align-items: center;
+}
+#footer__menu > li > select{
+    background-color: #2b2b2b;
+    border: 0;
+    color: #737373;
+    font-size: 1rem;
+}
+footer select:focus{
+    outline: none;
+}
+#footer__menu > li{
+    font-weight: bold;
+    margin: 1vmin;
+    color: #737373;
+}
+footer a{
+    color: #737373;
+}
+
+/* 기말고사 총 10문제, 문제 당 10점, 100점 만점 구성
+
+1) p216 1번
+2) p241 2번
+3) p254 2번
+4) p289 4번
+5) p326 1번
+6) p327 3번
+7) p359 1번 이벤트 리스너를 이용한 이벤트 핸들러 문법 서술
+8) p359 2번
+9) p360 4번
+10) p360 5번 */
+
