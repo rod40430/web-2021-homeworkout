@@ -5,13 +5,20 @@
     $teacher = $_POST['teacher'];
     $introduce = $_POST['introduce'];
     $category = $_POST['category'];
-    $url = "/web/video/";
     $vr_rank = $_POST['vr_rank'];
+
+
+    $url = "/web/video/";
     $_FILES['userfile']['name'] = $name.".mp4";
-    $uploaddir = 'C:\Bitnami\wampstack-8.0.3-0\apache2\htdocs\web\video\\';
+    $uploaddir = 'D:\bitbami\apache2\htdocs\web\video\\';
     $uploadfile = $uploaddir.basename($_FILES['userfile']['name']);
 
-    if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)){
+    $url2 = "/web/thumbnail/";
+    $_FILES['thumbnail']['name'] = $name.".jpg";
+    $uploaddir2 = 'D:\bitbami\apache2\htdocs\web\thumbnail\\';
+    $uploadfile2 = $uploaddir2.basename($_FILES['thumbnail']['name']);
+
+    if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile) && move_uploaded_file($_FILES['thumbnail']['tmp_name'], $uploadfile2)){
         $sql = "insert into bundle(
             video_name,
             video_author,
@@ -20,7 +27,8 @@
             category,
             v_url,
             vr_rank,
-            vd_date)
+            vd_date,
+            thumbnail)
             values(
             '$name',
             '$author',
@@ -29,10 +37,11 @@
             '$category',
             '$url',
             '$vr_rank',
-            now()
+            now(),
+            '$url2'
             )";
-            // echo "<pre>";
-            // echo $sql;
+            echo "<pre>";
+            echo $sql;
             $result = mysqli_query($conn, $sql);
     }
     else{

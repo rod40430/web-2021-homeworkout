@@ -39,23 +39,6 @@
                 </label>
             </div>
             <div class="content__upload__div">
-                <!-- <form id="upload__body" action="./php/upload.php" method="post" enctype="multipart/form-data">
-                    <p>영상 업로드 <label for="input-file"><img src="./image/워황.png" alt=""></label><input type="file" name="userfile" id="input-file"></p>
-                    <p>영상 이름 : <input type="text" name="name"></p>
-                    <p>작가 : <input type="text" name="author"></p>
-                    <p>강사 : <input type="text" name="teacher"></p>
-                    <p>소개 : <input type="text" name="introduce"></p>
-                    <p>카테고리 : <select name="">
-                        <option value="">#</option>
-                        <option value="">#</option>
-                    </select></p>
-                    <p>영상 등급 : <select name="">
-                        <option value="">#</option>
-                        <option value="">#</option>
-                    </select></p>
-                    <input type="submit" value="업로드">
-                </form> -->
-
                 <form action="./php/upload.php" method="post" enctype="multipart/form-data">
                     <div class="progress__div">
                         <div class="progress__top"><h5>세부정보</h5><h5>동영상요소</h5><h5>업로드</h5></div>
@@ -71,7 +54,7 @@
                             <h5>동영상 썸네일</h5>
                             <div>
                                 <label for="m_up"><img src="./image/png/m_up.png" alt=""></label>
-                                <input type="file" accept="img/*" name="" id="m_up">
+                                <input type="file" accept="img/*" name="thumbnail" id="m_up">
                                 <img src="./image/png/thumbnail.png" alt="thumbnail" class="thumbnail">
                             </div>
                         </div>
@@ -87,18 +70,18 @@
                             <p>강사</p><input type="text" name="teacher" class="bgcr">
                             <div class="category">
                                 <p>카테고리</p>
-                                <select name="" class="bgcr">
-                                    <option value="#">#</option>
-                                    <option value="#">#</option>
-                                    <option value="#">#</option>
-                                    <option value="#">#</option>
-                                    <option value="#">#</option>
+                                <select name="category" class="bgcr">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
                                 </select>
                             </div>
                             <div class="video__level">
                                 <p>영상 등급</p>
-                                <select name="" class="bgcr">
-                                    <option value="411">전체이용가</option>
+                                <select name="vr_rank" class="bgcr">
+                                    <option value="0">전체이용가</option>
                                     <option value="7">7세</option>
                                     <option value="12">12세</option>
                                     <option value="15">15세</option>
@@ -118,7 +101,7 @@
     <!-- header -->
     <header class="bgcr">
         <div id="header__div">
-            <img src="./image/png/stutio_logo.png" alt="logo">
+        <a href="./index.php"><img src="./image/png/stutio_logo.png" alt="logo"></a>
         </div>
     </header>
 
@@ -131,7 +114,7 @@
             <div id="profile">
                 <div id="profile__div">
                     <img id="profile__icon" src="./image/png/admin.png" alt="no">
-                    <h3 id="profile__name">admin 님</h3>
+                    <h3 id="profile__name"><?=$_SESSION["name"]?> 님</h3>
                     <button id="logout__btn">로그아웃</button>
                 </div>
             </div>
@@ -174,12 +157,10 @@
 
 
                         <!-- php -->
-                        <?php
+                        <?php 
                             while($row = mysqli_fetch_array($result)){
                         ?>
-                    
-                        <video src="<?=$row['v_url'].$row['video_name']?>.mp4" controls></video>
-                    
+                            <a href="./player/player.php?type=<?=$row['video_name']?>"><img src="<?=$row['thumbnail'].$row['video_name']?>.jpg" alt="썸네일"></a>
                         <?php
                             }
                         ?>

@@ -183,7 +183,7 @@ form{
     max-width: 64%;
     max-height: 14vmin;
 }
-#m_up, #input-file, #cancle__btn{
+#m_up, #input-file, #cancle__btn, .link__img{
     display: none;
 }
 .video__upload__div{
@@ -466,7 +466,7 @@ li:nth-child(1) img{
     height: 71vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: flex-start;
     /* outline: 1px solid purple; */
     overflow: auto;
@@ -482,9 +482,9 @@ li:nth-child(1) img{
     background-color: #504f4f;
     border-radius: 0.5vmin;
 }
-.content__layout video{
+.content__layout img{
     width: 16vmax;
-    margin: 1vmin 0;
+    margin: 1vmin 15px;
 }
 #content > img{
     height: 40%;
