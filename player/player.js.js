@@ -19,6 +19,7 @@ const vleft = document.querySelector(`.left`);
 const vright = document.querySelector(`.right`);
 const loopstart = document.querySelector(`.loopstart`);
 const loopend = document.querySelector(`.loopend`);
+const reset = document.querySelector(`.reset`);
 const con = document.querySelectorAll(`.con`);
 let ismousedown = false;
 let ismousedown2 = false;
@@ -152,12 +153,17 @@ player.addEventListener(`mouseleave`, () => {
 
 let start = 0;
 let end = 999999;
+resetck = 0;
 loopstart.addEventListener(`click`, () => {
     start = myplayer.currentTime;
 });
 
 loopend.addEventListener(`click`, () => {
     end = myplayer.currentTime; 
+});
+
+reset.addEventListener(`click`, () => {
+    end = 999999;
 });
 
 myplayer.addEventListener(`timeupdate`, () => {

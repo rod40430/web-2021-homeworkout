@@ -40,8 +40,8 @@
             now(),
             '$url2'
             )";
-            echo "<pre>";
-            echo $sql;
+            // echo "<pre>";
+            // echo $sql;
             $result = mysqli_query($conn, $sql);
     }
     else{

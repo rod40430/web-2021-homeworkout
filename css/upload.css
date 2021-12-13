@@ -483,7 +483,8 @@ li:nth-child(1) img{
     border-radius: 0.5vmin;
 }
 .content__layout img{
-    width: 16vmax;
+    width: 12vmax;
+    height: 8vmax;
     margin: 1vmin 15px;
 }
 #content > img{

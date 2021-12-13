@@ -116,7 +116,7 @@
         .topController > .controller_left{
             width: 6%;
         }
-        .playNpause, .stop, .prev, .next, .speed, .all, .back, .loopstart, .loopend{
+        .playNpause, .stop, .prev, .next, .speed, .all, .back, .loopstart, .loopend, .reset{
             background-color: rgba(0, 255, 255, 0.342);
             width: 6vmin;
             height: 6vmin;
@@ -257,6 +257,7 @@
                                 </div>
                             </div>
                     </div>
+                    <div class="reset">reset</div>
                     <div class="all">all</div>
                 </div>
             </div>
