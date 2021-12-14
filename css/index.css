@@ -3,10 +3,24 @@
 /* 초기화 */
 *{margin: 0;    padding: 0;    list-style: none;}
 a{text-decoration: none;    color: white;}
-body{color: white;    font-family: 'NanumSquare', sans-serif;    background-color: #161616;    position: relative;}
+body{
+    color: white;
+    font-family: 'NanumSquare', sans-serif;
+    background-color: #161616;
+    position: relative;
+}
+body::-webkit-scrollbar{
+    width: 1vmin;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #fe7373;
+}
+body::-webkit-scrollbar-track{
+    background-color: #504f4f;
+}
 section, footer{width: 100%;}
 section{position: relative;}
-.h208 ul, .h260 ul, #rank ul{position: absolute;}
+.h208 ul, .h260 ul{position: absolute;}
 
 
 /* --------------------------------헤더------------------------------------- */
@@ -76,7 +90,7 @@ header .nav li:hover{
     transition: all 0.6s;
     margin-right: 10px;
     outline: 2px solid rgb(152, 151, 153);
-    padding-left: 10px;
+    padding: 0 10px;
     cursor: default;
 }
 .search__icon{
@@ -104,7 +118,7 @@ header .nav li:hover{
 .small__layout{
     position: absolute;
     top: 96%;
-    right: 2.8vw;
+    right: 2.9vw;
     width: 200px;
     height: 180px;
     /* border: 1px solid red; */
@@ -194,7 +208,12 @@ header .nav li:hover{
     width: 100%;
     background-color: #000;
 }
-
+.video__layout{
+    width: 171vmin;
+    padding-left: 2%;
+    display: flex;
+    /* outline: 1px solid red; */
+}
 
 /* 첫번째 줄 강제 이동 */
 #first__section{
@@ -219,16 +238,11 @@ header .nav li:hover{
     color: white;
     font-size: 1.3rem;
 }
-/* 각 줄 영상이 나열될 영역 */
-.h208__video__layout{
-    margin-left: 2%;
-    /* outline: 1px solid red; */
-    display: flex;
-}
+
 /* 영상들 */
 .h208__video{
     margin-right: 1vmin;
-    background-color: olive;
+    /* background-color: olive; */
     width: 27.5vmin;
     height: 20.8vmin;
     border-radius: 0.6vmin;
@@ -274,16 +288,11 @@ header .nav li:hover{
     color: white;
     font-size: 1.3rem;
 }
-/* 각 줄 영상이 나열될 영역 */
-.h260 > .h260__video__layout{
-    margin-left: 2%;
-    /* outline: 1px solid red; */
-    display: flex;
-}
+
 /* 영상들 */
 .h260__video{
     margin-right: 1vmin;
-    background-color: orange;
+    /* background-color: orange; */
     width: 27.5vmin;
     height: 26vmin;
     border-radius: 0.6vmin;
@@ -305,6 +314,8 @@ header .nav li:hover{
     width: 100%;
     height: 35vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 /* 각 줄 제목 */
 .rank__title{
@@ -312,22 +323,48 @@ header .nav li:hover{
     color: white;
     font-size: 1.3rem;
 }
+
+.rank__div{
+    margin: 0 2%;
+    width: 96%;
+    overflow: auto;
+}
+.rank__div::-webkit-scrollbar{
+    height: 1vmin;
+}
+.rank__div::-webkit-scrollbar-thumb{
+    background-color: #fe7373;
+    border-radius: 0.5vmin;
+}
+.rank__div::-webkit-scrollbar-track{
+    background-color: #504f4f;
+    border-radius: 0.5vmin;
+}
 /* 각 줄 영상이 나열될 영역 */
-.rank__layout > .rank__video__line{
-    margin-left: 4%;
-    /* outline: 1px solid red; */
+.rank__layout .rank__video__line{
+    margin: 0 7vmin 2vmin 6vmin;
     display: flex;
+    width: 273vmin;
+    /* outline: 1px solid red; */
 }
 /* 영상들 */
 .rank__video{
     margin-right: 1vmin;
-    background-color: salmon;
+    /* background-color: salmon; */
     width: 26.3vmin;
     height: 18.9vmin;
     border-radius: 0.6vmin;
 }
 .thumb__layout{
     position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.thumb__layout img{
+    width: 50%;
 }
 
 /* 이동 버튼 --------------------------------------------------------------------------------------------- */

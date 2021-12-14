@@ -10,12 +10,12 @@
 
     $url = "/web/video/";
     $_FILES['userfile']['name'] = $name.".mp4";
-    $uploaddir = 'D:\bitbami\apache2\htdocs\web\video\\';
+    $uploaddir = 'C:\Bitnami\wampstack-8.0.3-0\apache2\htdocs\web\video\\';
     $uploadfile = $uploaddir.basename($_FILES['userfile']['name']);
 
     $url2 = "/web/thumbnail/";
     $_FILES['thumbnail']['name'] = $name.".jpg";
-    $uploaddir2 = 'D:\bitbami\apache2\htdocs\web\thumbnail\\';
+    $uploaddir2 = 'C:\Bitnami\wampstack-8.0.3-0\apache2\htdocs\web\thumbnail\\';
     $uploadfile2 = $uploaddir2.basename($_FILES['thumbnail']['name']);
 
     if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile) && move_uploaded_file($_FILES['thumbnail']['tmp_name'], $uploadfile2)){

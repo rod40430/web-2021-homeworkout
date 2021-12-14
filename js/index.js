@@ -1,33 +1,3 @@
-// window.onload = function() {
-// 	let randImg = new Array();
-// 		randImg[randImg.length] = 'ball.jpg';
-// 		randImg[randImg.length] = 'hr2.jpg';
-// 		randImg[randImg.length] = 'muscle.jpg';
-// 		randImg[randImg.length] = 'yoga.jpg';
-// 		randImg[randImg.length] = 'stretch.jpg';
-// 		randImg[randImg.length] = 'kid.jpg';
-// 		randImg[randImg.length] = 'kid2.jpg';
-// 		randImg[randImg.length] = 'yoga2.jpg';
-// 		randImg[randImg.length] = 'c1.jpg';
-// 		randImg[randImg.length] = 'ph.jpg';
-
-// 		let randID = [1, 2, 3, 4];
-
-// 		for(i = 0; i < randID.length; i++){
-
-// 			let iDsize = Math.floor(Math.random()*(randID.length));
-// 			let setImg = document.getElementById('testImg'+randID[iDsize]);
-
-// 			for(j = 0; j < randImg.length; j++){
-
-// 				let size = Math.floor(Math.random()*(randImg.length));
-// 				setImg.setAttribute('src', './image/jpg/'+ randImg[size]);
-
-// 			}
-// 		}
-// }
-
-
 // 수ㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㄴ 함수
 function soon(){
     alert('SOOOOOOOOOOON');
@@ -36,7 +6,7 @@ function soon(){
 
 // 네비 이동 함수
 function Move(sectionId) {
-	let offset = $("#" + sectionId).offset(); // 각 색션의 위치 저장
+	let offset = $("#" + sectionId).offset(); // 매개변수로 받은 값으로 아이디 추출
 
 	// 저장된 위치까지 화면 스크롤 이동
 	if(sectionId == "top"){
@@ -68,17 +38,17 @@ function ShowBar(){
 
 	// 검색창 보이기
 	let showBar = {
-		'opacity' : '100%',
-		'width' : '14vw'
+		'opacity' : '100%',		// 투명도 100% = 잘 보인다
+		'width' : '14vw'		// 넓이 뷰포트의 14%
 	}
 
 	// 검색창 가리기
 	let offBar = {
-		'opacity' : '0%',
-		'width' : '1px'
+		'opacity' : '0%',		// 투명도 0% = 안 보인다
+		'width' : '1px'			// 넓이 1px
 	}
 
-	// 검색창의 넓이가 1px인 경우 보이고 아니면 가리기
+	// 검색창의 넓이가 1px인 경우 보이도록 하고 아니면 가리기
 	if($('.search__bar').css('opacity') == '0'){
 		$('.search__bar').css(showBar);
 		console.log("show");
@@ -94,7 +64,7 @@ function ShowBar(){
 
 // 헤더 배경색상 변경 함수
 $(window).scroll(function(){
-	let targetTop = $('#watching').offset();
+	let targetTop = $('#recommend').offset();
 	let styleObj = {
 		'background-color' : '#161616'
 	};
@@ -154,6 +124,7 @@ $(document).ready(function () {
 		}
 	});
 });
+
 //로그아웃 
 function logout() {
 	const data = confirm("로그아웃 하시겠습니까?");
@@ -177,134 +148,95 @@ $(document).ready(function (){
         $(this).children('.title__layout').css('opacity', '0');
         $(this).children('.title__layout').children('h3').css('left', '-5%');
     })
-
-
-	// 이동
-	// let moveToAway = {
-	// 	'left' : '-164%',
-	// 	'top' : '-164%',
-	// 	'transform' : 'rotate(-45deg)'
-	// };
-
-	let moveToDown = {
-		'left' : '-135.6%',
-		'top' : '-117.5%',
-		'transform' : 'rotate(-49.45deg)'
-	};
-
-	// 복귀
-	let moveToBack = {
-		'left' : '-164%',
-		'top' : '-164%',
-		'transform' : 'rotate(-45deg)'
-	}
-
-	// top, left 0으로 위치
-	// let moveToZero = {
-	// 	'left' : '0',
-	// 	'top' : '0'
-	// };
-
-	// 영상 썸네일 호버시 확대
-
-	// let overExtended = {
-	// 	transform: 'scale(1.1)'
-	// }
-
-	// let shrink = {
-	// 	transform: 'scale(1)'
-	// }
-
-	// $(".video__thumb__layout").hover(function (){
-	// 	$(this).parent('li').css(overExtended);
-
-	// 	$('video', this)[0].currentTime = 30;
-	// 	$('video', this)[0].play();
-
-	// }, function (){
-	// 	$(this).parent('li').css(shrink);
-
-	// 	$('video', this)[0].pause();
-	// });
-
-
-	// 회전
-	// let turn = {
-	// 	'transform' : 'rotate(0deg)'
-	// };
-
-	// 회전 복귀
-	// var reTurn = {
-	// 	'transform' : 'rotate(-45deg)'
-	// };
-
-
-	// infor 아이콘 클릭시 요약 내용 보이기
-
-	// let onOff = 1; // 1 = 내용 보이기 / 0 = 끄기
-
-	$(document).on('click', '.infor__icon__layout', function (){
-
-		// console.log(onOff);
-
-		if($(this).children('.close__infor__icon').css('display') == 'none'){
-			$(this).next().css(moveToDown);
-			$(this).children('.infor__icon').hide();
-			$(this).children('.close__infor__icon').css('display', 'flex');
-			$(this).next().children('.video__infor__summary').css('display', 'flex');
-			// onOff = 0;
-			// console.log(onOff);
-		}
-		else{
-			$(this).next().css(moveToBack);
-			$(this).children('.infor__icon').show();
-			$(this).children('.close__infor__icon').css('display', 'none');
-			$(this).next().children('.video__infor__summary').css('display', 'none');
-			// onOff = 1;
-			// console.log(onOff);
-		}
-	});
 });
 
 // video items move
-$(document).ready(function (){
-	$('.left__arrow').parent().hide();
+window.onload = function(){
+	
+	let header = document.querySelector('header');
+	let ulVw = $('.video__layout').width();
+	let distance = ulVw/header.offsetWidth*100;
+	let isClick = 0;
 
-	$('.right__arrow').parent().on('click', function (){
+	$('.left').hide();
 
-		let findParent = $(this).parent().attr('class');
-
+	$('.right').on('click', function (){
+		
+		let findParentClass = $(this).parent().attr('class');
+		let headerWidth = $('header').width();
+		let targetWidth = $('.rank__video__line').width();
+		
 		// show
-		$('.left__arrow').parent().show();
+		$('.left').show();
 		$('.btn__locate').css('justify-content', 'space-between');
+		
+		isClick++;
+		// console.log(isClick);
 
-		// move
-		$(this).parent().prev().stop().animate({
-			left: '-=75%'
-		}, 400);
+		if(isClick == 1){
 
-		// create item
-		for(i = 0; i < 6; i++){
-			if(findParent == "btn__locate h208__btn"){
-				$(this).parent().prev().append('<li><div class="h208__video video__item"></div></li>');
+			// create item : 시험용 리스트 아이템 생성
+			// for(i = 0; i < 6; i++){
+			// 	if(findParentClass == "btn__locate h208__btn"){
+			// 		$(this).parent().prev().append('<li><div class="h208__video video__item"></div></li>');
+			// 	}
+			// 	if(findParentClass == "btn__locate h260__btn"){
+			// 		$(this).parent().prev().append('<li><div class="h260__video video__item"></div></li>');
+			// 	}
+			// }
+
+			// move
+			if(findParentClass == "btn__locate rank__btn"){
+
+				let moveLocate = (targetWidth-headerWidth)/headerWidth*100+5;
+
+				$(this).parent().prev().animate({
+					left: '-' + moveLocate + '%'
+				}, 400, function(){
+					isClick = 0;
+				});	
+			}else{
+				$(this).parent().prev().animate({
+					left: '-=' + distance + '%'
+				}, 400, function(){
+					isClick = 0;
+				});	
 			}
-			if(findParent == "btn__locate h260__btn"){
-				$(this).parent().prev().append('<li><div class="h260__video video__item"></div></li>');
-			}
+			// console.log($(this).parent().prev().css('left'))
 		}
 	});
 	
 	$('.left__arrow').parent().on('click', function (){
 
-		if($(this).parent().prev().css('left') >= '0px')
-		{
-			$(this).parent().prev().css('left', '0px');
-		}
-		else if($(this).parent().prev().css('left') < '0px')
-		{
-			$(this).parent().prev().stop().animate({
-				left: '+=75%'
-			}, 400);
+		let findParentClass = $(this).parent().attr('class');
+
+		if($(this).parent().prev().css('left') < '-1%' || $(this).parent().prev().css('left') > '0%'){
+			$(this).parent().prev().animate({
+				left: '0%'
+			}, 100);
+
+			$('.left').hide();
+			$('.btn__locate').css('justify-content', 'flex-end');
+			// console.log($(this).parent().prev().css('left'))
+		}else{
+			isClick++;
+			if(isClick == 1){
+	
+				if(findParentClass == "btn__locate rank__btn"){
+					$(this).parent().prev().animate({
+						left: '0%'
+					}, 400, function(){
+						isClick = 0;
+					});
+				}else{
+					$(this).parent().prev().animate({
+						left: '+='+ distance +'%'
+					}, 400, function(){
+						isClick = 0;
+					});
+				}
+			}
+			// console.log($(this).parent().prev().css('left'))
 		}
 	});
-});
+}
